@@ -6,7 +6,7 @@ use crate::grammar::prototypes::Prototype;
 use std::collections::HashSet;
 
 lazy_static! {
-   static ref APPLE: Prototype = Prototype::Noun(Noun {
+   pub static ref APPLE: Prototype = Prototype::Noun(Noun {
       enumerability: Enumerability::Countable,
       associability: Associability::Associable,
       flavour: Flavour::Open,
@@ -15,7 +15,7 @@ lazy_static! {
       meaning: "apple",
       root_stems: HashSet::new(),
    });
-   static ref EAT: Prototype = Prototype::Verb(Verb {
+   pub static ref EAT: Prototype = Prototype::Verb(Verb {
       receiver: Receiver::Single,
       valency: Valency::One,
       instantaneous: false,
@@ -23,7 +23,7 @@ lazy_static! {
       creation: false,
       stem: "buli",
       meaning: "eat",
-      root_stems: Default::default(),
+      root_stems: HashSet::new(),
       argument_meanings: &["eater", "food item"],
    });
 }

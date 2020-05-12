@@ -1,1 +1,1 @@
-mod test_words;
+pub(crate) mod test_words;
